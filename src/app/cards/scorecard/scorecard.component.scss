@@ -1,0 +1,148 @@
+@import '../../../styles.scss';
+.mat-header-row,
+.mat-row {
+    min-height: 16px !important;
+    padding: 0 3px !important;
+}
+
+.mat-header-row {
+    background-color: mat-color($candy-app-accent) !important;
+    padding: 0 4px !important;
+}
+
+.mat-header-cell {
+    color: white !important;
+    padding: 0 4px !important;
+}
+
+.mat-cell {
+    padding: 0 4px;
+}
+
+.mat-column-playerid {
+    font-weight: bolder;
+}
+
+.scoreLine {
+    background-color: mat-color($candy-app-accent, 0.5) !important;
+    font-weight: bolder !important;
+}
+
+mat-row:nth-child(even) {
+    background-color: white;
+}
+
+mat-row:nth-child(odd) {
+    background-color: #E5E5E5;
+}
+
+mat-table mat-row:hover {
+    z-index: 50;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+}
+
+.customTab ::ng-deep .mat-tab-label {
+    height: 24px;
+    font-size: 12px;
+}
+
+.fixtureCard {
+    background-color: white;
+    border-radius: 3px;
+    padding: 4px 0px;
+}
+
+@media (min-width: 700px) {
+    .mat-column-runs {
+        max-width: 7vw;
+    }
+    .mat-column-balls {
+        max-width: 7vw;
+    }
+    .mat-column-strikerate {
+        max-width: 7vw;
+    }
+    .mat-column-fours {
+        max-width: 7vw;
+    }
+    .mat-column-sixes {
+        max-width: 7vw;
+    }
+    .mat-column-overs {
+        max-width: 7vw;
+    }
+    .mat-column-wickets {
+        max-width: 7vw;
+    }
+    .mat-column-bowlruns {
+        max-width: 7vw;
+    }
+    .mat-column-econ {
+        max-width: 7vw;
+    }
+    .mat-column-dots {
+        max-width: 7vw;
+    }
+    .mat-cell {
+        padding: 4px 0px;
+        font-size: 11px;
+    }
+    .variableFont {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 700px) {
+    .mat-column-runs {
+        max-width: 40px;
+        text-align: center !important;
+    }
+    .mat-column-balls {
+        max-width: 40px;
+        text-align: center !important;
+    }
+    .mat-column-strikerate {
+        max-width: 40px;
+    }
+    .mat-column-fours {
+        max-width: 40px;
+    }
+    .mat-column-sixes {
+        max-width: 40px;
+    }
+    .mat-column-overs {
+        max-width: 40px;
+        text-align: center !important;
+    }
+    .mat-column-wickets {
+        max-width: 40px;
+        text-align: center !important;
+    }
+    .mat-column-bowlruns {
+        max-width: 40px;
+        text-align: center !important;
+    }
+    .mat-column-econ {
+        max-width: 40px;
+    }
+    .mat-column-dots {
+        max-width: 40px;
+    }
+    .mat-cell {
+        padding: 2px 2px;
+        font-size: 10px;
+    }
+    .variableFont {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .variableFont {
+        font-size: 9px;
+    }
+    .mat-cell {
+        padding: 2px 2px;
+        font-size: 9px;
+    }
+}

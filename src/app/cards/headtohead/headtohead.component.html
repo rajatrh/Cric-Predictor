@@ -1,0 +1,19 @@
+<div fxFlexFill fxLayout="column" fxLayoutGap="8px" class="fixtureCard mat-elevation-z4" style="padding: 8px;">
+  <div fxFlex>
+    <span style="font-size: small; font-weight: bold;">{{data.title}}</span>
+    <br>
+    <span style="font-size: smaller; color: gray;">{{data.comparisonBasis}}</span>
+  </div>
+  <div fxFlex="60" FxLayout="row" fxLayoutGap="4px">
+    <div *ngFor="let entity of data.entity" fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="6px"
+      class="box"
+      [style.color]="entity.color ? entity.color : 'black'"
+      [style.backgroundColor]="entity.backgroundColor ? entity.backgroundColor : 'white'">
+      <span style="font-size: large; font-weight: bold;">{{entity.number}}</span>
+      <span style="font-size: smaller; ">{{entity.name}}</span>
+    </div>
+  </div>
+  <div fxFlex>
+    <span style="font-size: small; font-weight: bold;">{{data.conclusion}}</span>
+  </div>
+</div>

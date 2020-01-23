@@ -1,0 +1,35 @@
+<div fxFlexFill fxLayout="column" fxLayoutGap="12px" style="background-color: #e5e5e8; padding: 8px;">
+  <span fxFlex="3" style="font-weight: bold;">Upcoming Matches</span>
+  <div (click)="goToFixture(fix)" *ngFor="let fix of fixtures" fxLayout="column" class="fixtureCard mat-elevation-z4">
+    <div fxFlex="20">
+      <span style="font-size: smaller; color: darkgray; padding: 4px;">{{fix.league}}</span>
+    </div>
+    <div fxFlex fxLayoutAlign="start center">
+      <div fxFlexFill fxLayout="row" fxLayoutGap="10px">
+        <div fxFlex fxLayoutAlign="start center">
+          <div class="leftTeam" [style.backgroundColor]="fix.primaryColor[0]" fxLayoutAlign="center center">
+            <span>{{fix.teams[0]}}</span>
+          </div>
+        </div>
+        <div fxFlex fxLayoutAlign="center end">
+          <span style="color:#F44336; font-size: small; font-weight: bolder;">{{fix.timer}}</span>
+        </div>
+        <div fxFlex fxLayoutAlign="end center">
+          <div class="rightTeam" [style.backgroundColor]="fix.primaryColor[1]" fxLayoutAlign="center center">
+            <span>{{fix.teams[1]}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="30" fxLayoutAlign="start center">
+      <div fxFlexFill style="padding: 4px;" fxLayout="row">
+        <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+          <div *ngFor="let status of fix.status[0]" style="height: 10px; width: 10px; margin: 2px;" [style.backgroundColor]="status"></div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutAlign="end center">
+          <div *ngFor="let status of fix.status[1]" style="height: 10px; width: 10px; margin: 2px;" [style.backgroundColor]="status"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

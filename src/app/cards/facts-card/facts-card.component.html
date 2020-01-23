@@ -1,0 +1,16 @@
+<div fxFlexFill fxLayout="column" fxLayoutGap="8px" class="fixtureCard mat-elevation-z4" style="padding: 8px;">
+  <div fxFlex>
+    <span style="font-size: small; font-weight: bold;">{{data.title}}</span>
+  </div>
+  <div fxFlex="60" FxLayout="row" fxLayoutGap="4px">
+    <div fxFlex="60" fxLayoutAlign="center center">
+      <span style="font-size: large; font-weight: bold;">{{data.basis}}</span>
+    </div>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="6px"
+      class="box" [style.color]="data.entity.color ? data.entity.color : 'black'"
+      [style.backgroundColor]="data.entity.backgroundColor ? data.entity.backgroundColor : 'white'">
+      <span style="font-size: large; font-weight: bold;">{{data.entity.number}}</span>
+      <span style="font-size: smaller; ">{{data.entity.name}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<!-- <nav mat-tab-nav-bar backgroundColor="primary" style="width: 100%;">
+  <a mat-tab-link *ngFor="let link of links" (click)="activeLink = link" [active]="activeLink == link"> {{link}} </a>
+  <app-score-card [match]="match"></app-score-card>
+</nav> -->
+
+<div fxFlexFill style="background-color: #e5e5e8; overflow-y: scroll;">
+  <mat-tab-group color="accent" backgroundColor="primary">
+    <mat-tab [label]="links[0]">
+      <div style="padding: 8px;">
+        <app-headtohead [data]="comparsionData[0]"></app-headtohead>
+      </div>
+      <div style="padding: 8px;">
+        <app-facts-card [data]="factsData[0]"></app-facts-card>
+      </div>
+      <div style="padding: 8px;">
+        <app-headtohead [data]="comparsionData[1]"></app-headtohead>
+      </div>
+      <div style="padding: 8px;">
+        <app-scorecard [match]="fixture.matches[0]"></app-scorecard>
+      </div>
+      <div style="padding: 8px;">
+        <app-scorecard [match]="fixture.matches[1]"></app-scorecard>
+      </div>
+      <div style="padding: 8px;">
+        <app-headtohead [data]="comparsionData[2]"></app-headtohead>
+      </div>
+    </mat-tab>
+  
+    <mat-tab [label]="links[1]">
+      <div style="padding: 8px;">
+        <app-facts-card [data]="factsData[1]"></app-facts-card>
+      </div>
+      <div style="padding: 8px;">
+        <app-headtohead [data]="comparsionData[4]"></app-headtohead>
+      </div>
+    </mat-tab>
+    <mat-tab [label]="links[2]">
+  
+    </mat-tab>
+  </mat-tab-group>
+</div>
